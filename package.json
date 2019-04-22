@@ -1,17 +1,17 @@
 {
   "name": "gun-appendonly",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+
+  "description": "create append only nodes. their keys values can not be modified unless signed by same SEA user",
   "scripts": {
-    "start": "parcel index.html --open",
     "build": "parcel build src/gun-appendOnly.js"
   },
   "dependencies": {
-    "gun": "0.2019.420",
-    "lodash": "4.17.11"
+    "gun": "^0.9",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
+    "jest": "^24.7.1",
     "@babel/core": "7.2.0",
     "parcel-bundler": "^1.6.1"
   },

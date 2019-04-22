@@ -144,3 +144,5 @@ function appendOnly(msg) {
   aoRoot.get('daniel').put({name:'daniel nadal'})//OK
   aoRoot.put({mark:'z'}) // FAIL
 */
+
+export default Gun;
