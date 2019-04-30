@@ -87,10 +87,6 @@ function inverseTestNodeKeyVal(val, key) {
 function appendOnly(msg) {
   const to = this.to,
     gun = this.as.gun;
-  if (msg["@"]) {
-    // console.log("passing @ msg", { msg, put: msg.put });
-    return to.next(msg);
-  }
 
   if (msg.put) {
     // console.log({ msg, x: msg.x });
@@ -117,6 +113,8 @@ function appendOnly(msg) {
       if (invalidKey) return { soul, invalidKey };
       return;
     });
+    //make sure we have atleast one promise
+    promises.push(Promise.resolve())
     return Promise.all(promises).then(r => {
       let invalid = find(r, x => x !== undefined);
       if (invalid) {
