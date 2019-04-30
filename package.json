@@ -1,6 +1,6 @@
 {
   "name": "@gooddollar/gun-appendonly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create append only nodes. their keys values can not be modified unless signed by same SEA user",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "source": "src/gun-appendOnly.js",
   "main": "dist/gun-appendOnly.js",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --external gun, gun/sea",
     "dev": "microbundle watch"
   },
   "dependencies": {
@@ -23,7 +23,10 @@
   "peerDependencies": {
     "gun": "^0.9"
   },
-  "files": ["dist/gun-appendOnly.js", "src/gun-appendOnly.js"],
+  "files": [
+    "dist/gun-appendOnly.js",
+    "src/gun-appendOnly.js"
+  ],
   "devDependencies": {
     "@babel/core": "7.2.0",
     "jest": "^24.7.1",
